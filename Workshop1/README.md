@@ -25,11 +25,11 @@ NA12878 | NA12878_R1.fastq | NA12878_R2.fastq
 NA12891 | NA12891_R1.qc.trimmed.fastq | NA12891_R2.qc.trimmed.fastq
 NA12892 | NA12892_R1.qc.trimmed.fastq | NA12892_R2.qc.trimmed.fastq
 
-We have already performed quality control (QC) on NA12891 and NA12892, but you will be responsible for cleaning up NA12878. Broadly we will be following the [GATK Best Practices pipeline](https://software.broadinstitute.org/gatk/best-practices/bp_3step.php?case=GermShortWGS) for calling variants from DNA sequencing data, though we will be skipping one step due to the small amount of data we are working with (we are skipping variant quality score recalibration, or VQSR).
+We have already performed quality control (QC) on NA12891 and NA12892, but you will be responsible for cleaning up NA12878. Broadly we will be following the [GATK Best Practices pipeline](https://gatk.broadinstitute.org/hc/en-us/articles/360036194592-Getting-started-with-GATK4) for calling variants from DNA sequencing data, though we will be skipping one step due to the small amount of data we are working with (we are skipping variant quality score recalibration, or VQSR).
 
 The general workflow will look like this:
 
-![GATK workflow](https://software.broadinstitute.org/gatk/img/BP_workflow_3.6.png) 
+![GATK workflow](https://us.v-cdn.net/5019796/uploads/FileUpload/eb/44f317f8850ba74b64ba47b02d1bae.png) 
 
 We are going to take raw sequencing reads, align the reads to the reference genome, and then call variants from the aligned reads. If you want to learn more about the main file formats we will be working with, the following pages provide information on [FASTQ](https://en.wikipedia.org/wiki/FASTQ_format), [SAM/BAM](http://genome.sph.umich.edu/wiki/SAM), and [VCF](https://en.wikipedia.org/wiki/Variant_Call_Format) formats.
 
