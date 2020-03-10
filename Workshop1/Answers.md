@@ -30,7 +30,7 @@ The second read in that file is quite good, though.
 >93.86% of the reads
 
 **How many of the reads in `NA12878.bam` were marked as PCR duplicates?**
->95
+>47
 
 ** What might happen in our subsequent variant calling if we failed to remove these reads?**
 >We might call non-existent variants due to the appearance that there's strong of evidence for them, when
