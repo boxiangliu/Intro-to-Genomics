@@ -294,43 +294,16 @@ samtools sort -o bam_pass2/Norm1_Aligned.out.sorted.bam bam_pass2/Norm1_Aligned.
 samtools index bam_pass2/Norm1_Aligned.out.sorted.bam
 ```
 
-If you're using a Mac, you can skip this next step. If you're running PuTTY on
-Windows, you'll need to install [Xming](https://sourceforge.net/projects/xming/files/latest/download), an 
-X11 forwarding client. Once you've installed Xming, open
-a new PuTTY window and log in to rice as usual, except on the initial PuTTY
-window, after typing in username<nolink>@rice.stanford.edu, then go to
-Connection -\> SSH -\> X11 and check the box labeled "Enable X11
-forwarding". Then press the "Open" button to open an SSH connection with
-X11 forwarding, used for showing graphical interfaces over a remote connection.
+Now we'll ask you to install [IGV](http://software.broadinstitute.org/software/igv/download) on 
+your own machine if you haven't already. Run the
+install file, and then run the executable file that is created to launch IGV. If you're running
+Windows and see a warning message, you can just allow the networking features of this app, which
+won't pose any real risk for your security.
 
-If you are using a Mac, you need to have
-[XQuartz](https://www.xquartz.org/) installed. You may need to restart
-your computer after installing XQuartz for it to work.
-
-Then we want to launch IGV. To do this on rice, open **a new terminal window**
-and `ssh` again, this time providing -X. Then run through the remaining
-[setup
-steps](https://github.com/zaczap/bios201/blob/master/setup.md). You can
-keep the other terminal window you were working with open because we will
-go back to it.
-```
-ssh <sunet>@rice.stanford.edu -X
-
-# run setup script one of either, depending on your shell:
-# source /afs/ir/class/bios201/setup/setup_tcsh.sh
-# or 
-# source /afs/ir/class/bios201/setup/setup_bash.sh
-
-igv.sh
-```
-Be patient while IGV lauches in a separate graphical window. This can take
-a bit of time. Once the IGV window appears, go to **File** -> **Load from file**.
-You should then navigate to and select `bam_pass2/Norm1_Aligned.out.sorted.bam`.
-
-**NOTE**: If you have trouble running IGV through rice, try installing
-[IGV](http://software.broadinstitute.org/software/igv/download) on you
-laptop. If you run IGV from you laptop, go to **File** -> **Load from
-URL**. Enter http://web.stanford.edu/class/bios201/workshop2_bam/Norm1_Aligned.out.sorted.bam.
+Go to **File** -> **Load from URL**. Enter 
+http://web.stanford.edu/class/bios201/workshop2_bam/Norm1_Aligned.out.sorted.bam. This is the
+exact same file that we just created with the samtools commands above; we've just put it on the course
+web page so that you can view it with your own laptop's display using IGV.
 
 ### Looking at the read pair we inspected in the bam file
 
