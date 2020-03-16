@@ -64,7 +64,7 @@ cd workshop2
 
 Alternatively, copy the workshop materials and all the outputs:
 ```
-cp -r /afs/ir/users/q/i/qinl/workshop2/ .
+cp -r /afs/ir/users/q/i/qinl/public/workshop2/ .
 cd workshop2
 ```
 
