@@ -62,6 +62,12 @@ cp -r /afs/ir/class/bios201/workshop2/ .
 cd workshop2
 ```
 
+Alternatively, copy the workshop materials and all the outputs:
+```
+cp -r /afs/ir/users/q/i/qinl/workshop2/ .
+cd workshop2
+```
+
 1 Understanding gene annotation formats
 ----------------------------------------
 
