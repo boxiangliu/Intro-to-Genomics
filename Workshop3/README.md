@@ -50,8 +50,9 @@ First, you need to install two R packages, DESeq2 and pheatmap. If you completed
 already have both installed. If not, you can install them using the following code:
 
 ```
-source("https://bioconductor.org/biocLite.R")
-biocLite("DESeq2")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("DESeq2")
 install.packages("pheatmap")
 ```
 
