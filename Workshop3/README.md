@@ -302,25 +302,24 @@ res = results(dds)
 plotMA(dds)
 ```
 
+DESeq provides two different p-values, `pvalue` and `padj`. When searching for differential expression across many genes, you should always use `padj`, which corrects for [multiple testing](http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf).
+
 Compare the strength of results between the sex-corrected DESeq2 run and the
 run with no covariates corrected.
 
 ```
-plot(log(res_nosex$pvalue, base=10), log(res$pvalue, base=10), xlim=c(-30,0), ylim=c(-30,0),
-            xlab="p-value, No sex correction", ylab="p-value, sex correction")
+plot(-log10(res_nosex$padj), -log10(res$padj), xlim=c(0,30), ylim=c(0,30),
+            xlab="-log10 adj. p-value, No sex correction", ylab="-log10 adj. p-value, sex correction")
 abline(a=0,b=1)
-abline(a=-5,b=0,lty=3,col="red")
-abline(v=-5,lty=3,col="red")
+abline(a=-log10(0.05),b=0,lty=3,col="red")
+abline(v=-log10(0.05),lty=3,col="red")
 ```
 
 :question: Are there any genes that become significant after correcting for sex? (Use the
 dashed red line as a cutoff for significance.) Do any that were initially significant become
 insignificant after correction?
 
-Let's see how many genes are differentially expresssed. DESeq provides two different p-values, `pvalue`
-and `padj`. When searching for differential expression across many genes, you should always use `padj`,
-which corrects for [multiple testing](http://www.stat.berkeley.edu/~mgoldman/Section0402.pdf).
-
+Let's see how many genes are differentially expresssed. Again, use adjusted p-values.  
 ```
 sum(res_nosex$padj < 0.05, na.rm=TRUE)
 sum(res$padj < 0.05, na.rm=TRUE)
