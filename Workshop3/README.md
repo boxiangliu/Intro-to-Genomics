@@ -1,5 +1,7 @@
 # Workshop 3: Differential expression analysis of RNA-seq data
 
+**Please download [BIOS201_Workshop3.Rmd](BIOS201_Workshop3.Rmd) and follow along in RStudio.**
+
 ## Introduction
 
 Last week, we mapped RNA-seq reads from a 
