@@ -31,12 +31,12 @@ in which you want to copy the data files. You should copy the whole workshop3 fo
 
 On Mac:
 ```
-scp -r <yourname>@rice.stanford.edu:/afs/.ir/class/bios201/workshop3 .
+scp -r <yourname>@rice.stanford.edu:/afs/ir/class/bios201/workshop2/workshop3 .
 ```
 
 Or on Windows:
 ```
-pscp -r <yourname>@rice.stanford.edu:/afs/.ir/class/bios201/workshop3 .
+pscp -r <yourname>@rice.stanford.edu:/afs/ir/class/bios201/workshop2/workshop3 .
 ```
 
 Now open RStudio. In case you want to rerun or modify your code, we recommend typing your code into
