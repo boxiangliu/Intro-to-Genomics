@@ -189,7 +189,7 @@ matrix.
 Let's try PCA on our RNA-seq data.
 
 ```
-pca = prcomp(log_counts)
+pca = prcomp(t(log_counts))
 ```
 
 We can visualize the first two principal components as follows. Our points represent samples,
@@ -207,14 +207,14 @@ color_code <- function(x, vals, colors)
 # Plot PC1 and PC2
 color_status = sapply(substring(covariates$samples, 1, 3), FUN=color_code,
                       vals=c("IPF", "Nor"), colors=c("blue", "red"))
-plot(pca$rotation[,1], pca$rotation[,2], col=color_status, pch=16)
+plot(pca$x[,1], pca$x[,2], col=color_status, pch=16)
 ```
 
 We can also plot the samples color-coded by sequencing batch:
 ```
 color_seqbatch = sapply(covariates$seq.batch, FUN=color_code,
                         vals=c(1, 2), colors=c("blue", "red"))
-plot(pca$rotation[,1], pca$rotation[,2], col=color_seqbatch, pch=16)
+plot(pca$x[,1], pca$x[,2], col=color_seqbatch, pch=16)
 ```
 
 :question: Which variable (disease status or sequencing batch) causes a stronger
@@ -229,7 +229,7 @@ Check out PC3 and PC4 instead.
 
 ```
 # Plot PC3 and PC4
-plot(pca$rotation[,3], pca$rotation[,4], col=color_status, pch=16)
+plot(pca$x[,3], pca$x[,4], col=color_status, pch=16)
 ```
 
 :question: Now do you see any separation of points based on disease status?
@@ -237,7 +237,7 @@ plot(pca$rotation[,3], pca$rotation[,4], col=color_status, pch=16)
 If we plot the correlation heatmap after removing the first 2 principal components, we now
 see that the samples cluster more nicely by disease status:
 ```
-pca_mat = cor(t(as.matrix(pca$rotation[,3:6])))
+pca_mat = cor(t(as.matrix(pca$x[,3:ncol(pca$x)])))
 diag(pca_mat) = NA
 pheatmap(pca_mat)
 ```
