@@ -60,8 +60,9 @@ To comment or uncomment a bunch of lines, highlight the lines and use Command(/C
 
 First, you need to install two R packages, DESeq2 and pheatmap. If you completed last week's workshop, you'll already have both installed. If not, you can install them using the following code:  
 ```{r install packages, eval=F}
-source("https://bioconductor.org/biocLite.R")
-biocLite("DESeq2")
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("DESeq2")
 install.packages("pheatmap")
 ```
 
