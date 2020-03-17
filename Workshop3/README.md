@@ -334,7 +334,7 @@ For the remainder of this workshop, we'll use only the results with the sex effe
 What are our top differentially expressed genes?
 
 ```
-head(res[order(res$pvalue),])
+head(res[order(res$padj),])
 ```
 
 According to DESeq, one of our top differentially expressed genes is ENSG00000170962.
@@ -357,7 +357,7 @@ Test these genes to see if they're replicated in our analysis.
 
 ```
 # MUC5B
-res[rownames(res) == "ENSG00000117983",]$pvalue 
+res[rownames(res) == "ENSG00000117983",]$padj
 ```
 
 ```
