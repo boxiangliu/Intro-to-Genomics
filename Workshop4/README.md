@@ -74,7 +74,7 @@ To look at our fragment sizes, we will take advantage of the "WWW" folder in you
 ```
 cp fragmentSizes.png ~/afs-home/WWW/
 ```
-Now navigate in your web browser to  http://web.stanford.edu/~sunet/, filling in sunet with your own sunet id. You should see a list of files, including fragmentSizes.png.  Click on it to see the plot. 
+Now navigate in your web browser to  [http://web.stanford.edu/~sunet/](https://www.youtube.com/watch?v=dQw4w9WgXcQ), filling in sunet with your own sunet id. You should see a list of files, including fragmentSizes.png.  Click on it to see the plot. 
 
 :question: What is the most common fragment length?
 
