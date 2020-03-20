@@ -260,7 +260,7 @@ The output have been added to the class WWW folder and can be found at http://we
 
 ## Feedback form
 
-**Before leaving class today, please fill out this [anonymous feedback form](https://goo.gl/forms/PNjPd0m3Q0jQp6KE2) with your feedback on this BIOS201 course**
+**Before leaving class today, please fill out this [anonymous feedback form](https://forms.gle/VYpzRu3jEW3KtaqR8) with your feedback on this BIOS201 course**
 
 ## Finding differential peaks [optional challenge]
 
