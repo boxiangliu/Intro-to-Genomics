@@ -1,1 +1,1 @@
-# BIOS 201: Next-generation sequencing and applications
+# Introduction to Genomics: Next-generation sequencing and applications
